@@ -19,9 +19,9 @@ jobs:
         with:
           entrypoint: /usr/local/bin/node 
           args: -v 
-      - uses: actions/checkout@v1    
+      - uses: actions/checkout@v1  
+        run: chmod +x ./.github/workflows/script.sh  
       - name: Run a script
-        run: chmod +x ./.github/workflows/script.sh
         uses: docker://node:12.14.1-alpine3.10
         with:
           entrypoint: ./.github/workflows/script.sh
