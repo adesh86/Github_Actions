@@ -20,6 +20,7 @@ jobs:
           entrypoint: /usr/local/bin/node 
           args: -v 
       - uses: actions/checkout@v1  
+      - name: permission 
         run: chmod +x ./.github/workflows/script.sh  
       - name: Run a script
         uses: docker://node:12.14.1-alpine3.10
